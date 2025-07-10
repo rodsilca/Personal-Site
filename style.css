@@ -1,0 +1,412 @@
+.gradient-background {
+  background: linear-gradient(300deg, #1c1d37, #372326, #010101);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Reset e fonte */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0d0d0d;
+  display: block;
+  color: white;
+}
+
+/* icone do mouse */
+#center {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+#center.escondido {
+  opacity: 0;
+}
+
+.mouse-icon{
+  display: inline-block;
+  width: 28px;
+  height: 44px;
+  border-radius: 12px;
+  border: 2px solid white;
+}
+
+.mouse-icon:after{
+  content: '';
+  display: inline-block;
+  margin-left: 8.5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  animation: move 1.3s infinite forwards;
+}
+
+@keyframes move {
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: gradient-animation 18s ease infinite;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  gap: 40px;
+}
+
+.text-area {
+  flex: 1 1 450px;
+}
+
+.photo-area img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Text styles */
+.intro {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.pronounce {
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+h2 {
+  font-size: 1.3rem;
+  margin: 10px 0 20px;
+  font-weight: 400;
+}
+
+h2 span {
+  color: #94a3b8;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.contact {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  /* background-color: #f97316; */
+  color: white;
+}
+
+.contact:hover {
+  background-color: #2a2a2a;
+}
+
+.download {
+  display: flex;
+  gap: 10px;
+  color: white;
+}
+
+.download img{
+  width: 20px;
+  height: 20px;
+}
+
+.download:hover {
+  color: #b8bfcb;
+}
+
+.technologies {
+  padding: 0px 20px;
+  padding-bottom: 60px;
+  margin-bottom: 100px;
+  background-color: #0d0d0d;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  
+}
+
+.technologies h2 {
+  width: 1000px;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #d1d5db;
+}
+
+/* Grade responsiva */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  justify-items: center;
+  width: 1000px;
+}
+
+/* Card */
+.tech-card {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  max-width: 300px;
+  transition: transform 0.2s ease;
+}
+
+.tech-card:hover {
+  transform: scale(1.03);
+}
+
+.tech-card img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tech-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.tech-card p {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  margin: 3px 0 0;
+}
+
+
+/* PROJETOS */
+/*  */
+/*  */
+
+.projects{
+  
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.projects-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1000px;
+
+}
+.projects-header h2{
+    margin: 0;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.btn-all{
+  padding: 15px 20px;
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.2s;
+}
+
+.btn-all:hover {
+  background-color: #2a2a2a;
+}
+
+.projects-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    width: 1000px;
+}
+
+.project-card{
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.project-card a{
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.project-card img{
+    max-width:  100%;
+    height: auto;
+    display: block;       /* Remove espaçamento indesejado */
+    object-fit: cover;
+}
+
+.project-info{
+    width: 100%;
+}
+
+.project-info h3{
+  font-size: 2rem;
+}
+
+.tags{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+
+
+.tags a{
+  padding: 20px;
+  background-color: cornflowerblue;
+  margin-bottom: 0;
+  text-align: center;
+  text-decoration: none;
+  width: 5rem;
+  border-radius: 10px;
+}
+
+.tec-tags{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tec-tags span{
+  background-color: #262626;
+  color: #d4d4d4;
+  font-size: 0.8rem;
+  padding: 6px 10px;
+  border-radius: 8px;
+
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 30px;
+}
+
+.footer-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 950px;
+}
+
+.footer-center{
+  display: flex;
+  gap: 20px;
+}
+
+.footer-center a{
+  transition: transform 0.2s ease;
+}
+
+.footer-center a:hover{
+  transform: scale(1.03);
+}
+
+.footer-icon img{
+  width: 40px;
+  height: 40px;
+}
+
+
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .photo-area img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
