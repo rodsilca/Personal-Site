@@ -25,7 +25,7 @@
 }
 
 body {
-  background-color: #0d0d0d;
+  background-color: #000000;
   display: block;
   color: white;
 }
@@ -77,12 +77,13 @@ body {
 
 /* Hero Section */
 .hero {
+  background-image: url(./assets/talvez1.png);
+  background-size:auto;
   padding: 60px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  animation: gradient-animation 18s ease infinite;
 }
 
 .hero-content {
@@ -100,8 +101,8 @@ body {
 }
 
 .photo-area img {
-  width: 250px;
-  height: 250px;
+  width: 400px;
+  height: 400px;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -118,10 +119,21 @@ h1 {
   margin: 10px 0;
 }
 
-.pronounce {
-  font-size: 0.9rem;
-  color: #94a3b8;
+.social-medias a {
+  margin-right: 10px;
+  transition: transform 0.2s ease;
 }
+
+.social-medias a img{
+  width: 40px;
+  height: 40px;
+}
+
+.social-medias img:hover{
+  transform: scale(1.03);
+}
+
+
 
 h2 {
   font-size: 1.3rem;
@@ -150,14 +162,13 @@ h2 span {
 }
 
 .contact {
-  background-color: #1e1e1e;
   border: 1px solid #333;
-  /* background-color: #f97316; */
   color: white;
+  transition: transform 0.3s ease-out;
 }
 
 .contact:hover {
-  background-color: #2a2a2a;
+  transform: scale(1.03);
 }
 
 .download {
@@ -179,7 +190,7 @@ h2 span {
   padding: 0px 20px;
   padding-bottom: 60px;
   margin-bottom: 100px;
-  background-color: #0d0d0d;
+  background-color: #000000;
   color: white;
   display: flex;
   flex-direction: column;
